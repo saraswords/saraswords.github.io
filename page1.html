@@ -28,10 +28,6 @@
             width: 600px;
         }
 
-        .video-item.medium {
-            width: 400px;
-        }
-
         .video-item.small {
             width: 300px;
         }
@@ -71,26 +67,26 @@
             left: 20px; /* Adjust as needed */
             color: white;
             font-size: 14px;
+            font-weight: body;
         }
 
         .back-button {
             position: absolute;
             top: 20px;
-            right: 20px;
-            padding: 10px 20px;
-            background-color: rgba(255, 0, 0, 0); /* Transparent initially */
+            left: 20px;
+            padding: 0;
+            background-color: transparent;
             border: none;
             color: white;
             cursor: pointer;
             font-size: 14px;
-            text-decoration: none;
-            transition: background-color 0.3s ease; /* Smooth transition */
+            text-decoration: underline;
+            transition: color 0.3s; /* Smooth color transition on hover */
         }
 
         .back-button:hover {
-            background-color: rgba(255, 0, 0, 0.5); /* Red with transparency */
+            color: red; /* Change text color to red on hover */
         }
-
     </style>
 </head>
 <body>
@@ -107,15 +103,10 @@
             <div class="play-button" onclick="toggleVideo('video2')">Play</div>
             <div class="video-caption">Sound</div>
         </div>
-        <div class="video-item medium" style="left: 70%; top: 50%;">
-            <video id="video3" src="/videos/My_Movie_37.mp4" preload="metadata" onclick="toggleVideo('video3')"></video>
+        <div class="video-item small" style="left: 70%; top: 50%;">
+            <video id="video3" src="/videos/another_video.mp4" preload="metadata" onclick="toggleVideo('video3')"></video>
             <div class="play-button" onclick="toggleVideo('video3')">Play</div>
             <div class="video-caption">Sound (soon)</div>
-        </div>
-        <div class="video-item large" style="left: 20%; top: 70%;">
-            <video id="video4" src="/videos/My_Movie_38.mp4" preload="metadata" onclick="toggleVideo('video4')"></video>
-            <div class="play-button" onclick="toggleVideo('video4')">Play</div>
-            <div class="video-caption">City.</div>
         </div>
         <!-- Add more video items as needed with different positions and sizes -->
     </div>
