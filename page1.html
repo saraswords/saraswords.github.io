@@ -9,26 +9,26 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0; /* Background color */
+            background-color: #000000; /* Background color */
         }
 
         .video-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: left;
             align-items: center;
             min-height: 100vh; /* Ensure minimum height to cover viewport */
         }
 
         .video-item {
             position: relative;
-            width: 300px; /* Adjust width of each video item */
+            width: 600px; /* Adjust width of each video item */
             margin: 10px;
             overflow: hidden;
         }
 
         .video-item video {
-            width: 100%;
+            width: 400px;
             height: auto;
             cursor: pointer; /* Show pointer cursor on hover */
         }
@@ -39,7 +39,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             color: white;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0);
             padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
