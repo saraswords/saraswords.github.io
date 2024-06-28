@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Off-Center HTML Page</title>
+    <style>
+        body {
+            background-color: white;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative; /* Added for positioning the back to home link */
+        }
+        .content {
+            background-color: transparent;
+            text-align: left;
+            max-width: 80%;
+            padding: 20px;
+            font-size: 20px;
+            color: black;
+            font-family: TimesNewRoman, sans-serif;
+        }
+        .back-to-home {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: black;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-family:TimesNewRoman, sans-serif;
+        }
+        .back-to-home:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-to-home">Back</a>
+    <div class="content">
+        <p>I'd put filler text here, but I don't know how to speak <i>Lorem ipsum</i>.</p>
+    </div>
+</body>
+</html>
