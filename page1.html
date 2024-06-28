@@ -44,7 +44,12 @@
         .video-item:hover .play-button {
             display: block; /* Show play button on hover */
         }
-
+        .video-caption {
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 10px; /* Adjust spacing between video and caption */
+        }
         .bottom-left-text {
             position: absolute;
             bottom: 20px; /* Adjust as needed */
@@ -60,16 +65,18 @@
         <div class="video-item" style="left: 10%; top: 10%;">
             <video id="video1" src="IMG_1575.mov" preload="metadata" onclick="toggleVideo('video1')"></video>
             <div class="play-button" onclick="toggleVideo('video1')">Play</div>
+            <div class="video-caption">Sight.</div>
         </div>
         <div class="video-item" style="left: 40%; top: 30%;">
             <video id="video2" src="My_Movie_36.mp4" preload="metadata" onclick="toggleVideo('video2')"></video>
             <div class="play-button" onclick="toggleVideo('video2')">Play</div>
+            <div class="video-caption">Sound.</div>
         </div>
         <!-- Add more video items as needed with different positions and sizes -->
     </div>
 
     <div class="bottom-left-text">
-        These are ordinary, industrial sights and/or sounds that are very sensorily engulfing. <br>Also, please turn down your volume before clicking on a video.
+        These are ordinary, industrial sights and/or sounds that are very sensorily engulfing. <br>Also, please turn down your volume before clicking on a video, and then adjust back up.
     </div>
 
     <script>
