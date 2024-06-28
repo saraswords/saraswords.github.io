@@ -30,7 +30,7 @@
         .video-item video {
             width: 100%;
             height: auto;
-            transition: transform 0.3s ease-out;
+            cursor: pointer; /* Show pointer cursor on hover */
         }
 
         .play-button {
@@ -38,12 +38,12 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            display: none; /* Initially hidden */
             color: white;
             background-color: rgba(0, 0, 0, 0.5);
             padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
+            display: none; /* Initially hidden */
         }
 
         .video-item:hover .play-button {
@@ -54,38 +54,29 @@
 <body>
     <div class="video-container">
         <div class="video-item">
-            <video id="video1" src="IMG_1575.mov" preload="metadata"></video>
-            <div class="play-button" onclick="playVideo('video1')">Play</div>
+            <video id="video1" src="IMG_1575.mov" preload="metadata" onclick="toggleVideo('video1')"></video>
+            <div class="play-button" onclick="toggleVideo('video1')">Play</div>
         </div>
         <div class="video-item">
-            <video id="video2" src="video2.mp4" preload="metadata"></video>
-            <div class="play-button" onclick="playVideo('video2')">Play</div>
+            <video id="video2" src="video2.mp4" preload="metadata" onclick="toggleVideo('video2')"></video>
+            <div class="play-button" onclick="toggleVideo('video2')">Play</div>
         </div>
         <!-- Add more video items as needed -->
     </div>
 
     <script>
-        function playVideo(videoId) {
+        function toggleVideo(videoId) {
             const video = document.getElementById(videoId);
+            const playButton = document.querySelector(`#${videoId} + .play-button`);
+
             if (video.paused) {
                 video.play();
+                playButton.style.display = 'none'; // Hide play button when video is playing
             } else {
                 video.pause();
+                playButton.style.display = 'block'; // Show play button when video is paused
             }
         }
-
-        // JavaScript for unmuting videos on hover
-        const videos = document.querySelectorAll('.video-item video');
-
-        videos.forEach(video => {
-            video.addEventListener('mouseenter', () => {
-                video.muted = false;
-            });
-
-            video.addEventListener('mouseleave', () => {
-                video.muted = true;
-            });
-        });
     </script>
 </body>
 </html>
