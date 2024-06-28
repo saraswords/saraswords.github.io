@@ -23,6 +23,15 @@
             cursor: pointer; /* Show pointer cursor on hover */
         }
 
+        /* Adjust size of video items */
+        .video-item.large {
+            width: 600px;
+        }
+
+        .video-item.small {
+            width: 300px;
+        }
+
         .video-item video {
             max-width: 100%; /* Ensure video doesn't exceed container width */
             height: auto;
@@ -33,7 +42,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: white;
+            color: transparent; /* Transparent text color */
             background-color: rgba(0, 0, 0, 0);
             padding: 10px 20px;
             border-radius: 5px;
@@ -64,12 +73,12 @@
 </head>
 <body>
     <div class="video-container">
-        <div class="video-item" style="left: 10%; top: 10%;">
+        <div class="video-item large" style="left: 10%; top: 10%;">
             <video id="video1" src="IMG_1575.mov" preload="metadata" onclick="toggleVideo('video1')"></video>
             <div class="play-button" onclick="toggleVideo('video1')">Play</div>
             <div class="video-caption">Sight.</div>
         </div>
-        <div class="video-item" style="left: 40%; top: 30%;">
+        <div class="video-item small" style="left: 40%; top: 30%;">
             <video id="video2" src="/videos/My_Movie_36.mp4" preload="metadata" onclick="toggleVideo('video2')"></video>
             <div class="play-button" onclick="toggleVideo('video2')">Play</div>
             <div class="video-caption">Sound.</div>
