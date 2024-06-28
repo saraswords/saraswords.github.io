@@ -67,13 +67,12 @@
             left: 20px; /* Adjust as needed */
             color: white;
             font-size: 14px;
-            font-weight: body;
         }
 
         .back-button {
             position: absolute;
             top: 20px;
-            left: 20px;
+            right: 20px;
             padding: 10px 20px;
             background-color: rgba(255, 0, 0, 0); /* Transparent initially */
             border: none;
@@ -87,6 +86,7 @@
         .back-button:hover {
             background-color: rgba(255, 0, 0, 0.5); /* Red with transparency */
         }
+
     </style>
 </head>
 <body>
@@ -102,6 +102,11 @@
             <video id="video2" src="/videos/My_Movie_36.mp4" preload="metadata" onclick="toggleVideo('video2')"></video>
             <div class="play-button" onclick="toggleVideo('video2')">Play</div>
             <div class="video-caption">Sound.</div>
+        </div>
+        <div class="video-item large" style="left: 70%; top: 50%;">
+            <video id="video3" src="/videos/My_Movie_37.mp4" preload="metadata" onclick="toggleVideo('video3')"></video>
+            <div class="play-button" onclick="toggleVideo('video3')">Play</div>
+            <div class="video-caption">Nature.</div>
         </div>
         <!-- Add more video items as needed with different positions and sizes -->
     </div>
