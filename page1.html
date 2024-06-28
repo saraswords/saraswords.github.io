@@ -21,10 +21,10 @@
         }
 
         .video-item {
+            position: relative;
             width: 300px; /* Adjust width of each video item */
             margin: 10px;
             overflow: hidden;
-            position: relative;
         }
 
         .video-item video {
@@ -33,25 +33,48 @@
             transition: transform 0.3s ease-out;
         }
 
-        .video-item video:hover {
-            transform: scale(1.1); /* Example: Enlarge video on hover */
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none; /* Initially hidden */
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 5px;
             cursor: pointer;
+        }
+
+        .video-item:hover .play-button {
+            display: block; /* Show play button on hover */
         }
     </style>
 </head>
 <body>
     <div class="video-container">
         <div class="video-item">
-            <video src="IMG_1575.mov" muted loop preload="metadata"></video>
+            <video id="video1" src="IMG_1575.mov" preload="metadata"></video>
+            <div class="play-button" onclick="playVideo('video1')">Play</div>
         </div>
         <div class="video-item">
-            <video src="video2.mp4" muted loop preload="metadata"></video>
+            <video id="video2" src="video2.mp4" preload="metadata"></video>
+            <div class="play-button" onclick="playVideo('video2')">Play</div>
         </div>
         <!-- Add more video items as needed -->
     </div>
 
     <script>
-        // JavaScript for playing sound on hover
+        function playVideo(videoId) {
+            const video = document.getElementById(videoId);
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        }
+
+        // JavaScript for unmuting videos on hover
         const videos = document.querySelectorAll('.video-item video');
 
         videos.forEach(video => {
