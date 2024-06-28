@@ -44,12 +44,14 @@
         .video-item:hover .play-button {
             display: block; /* Show play button on hover */
         }
+
         .video-caption {
             color: white;
             font-size: 14px;
             text-align: center;
             margin-top: 10px; /* Adjust spacing between video and caption */
         }
+
         .bottom-left-text {
             position: absolute;
             bottom: 20px; /* Adjust as needed */
@@ -63,12 +65,12 @@
 <body>
     <div class="video-container">
         <div class="video-item" style="left: 10%; top: 10%;">
-            <video id="video1" src="/videos/My_Movie_36.mp4" preload="metadata" onclick="toggleVideo('video1')"></video>
+            <video id="video1" src="IMG_1575.mov" preload="metadata" onclick="toggleVideo('video1')"></video>
             <div class="play-button" onclick="toggleVideo('video1')">Play</div>
             <div class="video-caption">Sight.</div>
         </div>
         <div class="video-item" style="left: 40%; top: 30%;">
-            <video id="video2" src="IMG_1575.mov" preload="metadata" onclick="toggleVideo('video2')"></video>
+            <video id="video2" src="/videos/My_Movie_36.mp4" preload="metadata" onclick="toggleVideo('video2')"></video>
             <div class="play-button" onclick="toggleVideo('video2')">Play</div>
             <div class="video-caption">Sound.</div>
         </div>
@@ -85,6 +87,13 @@
             const playButton = document.querySelector(`#${videoId} + .play-button`);
 
             if (video.paused) {
+                // Pause all other videos and mute them
+                document.querySelectorAll('video').forEach(v => {
+                    v.pause();
+                    v.muted = true;
+                });
+
+                video.muted = false; // Unmute the clicked video
                 video.play();
                 playButton.style.display = 'none'; // Hide play button when video is playing
             } else {
