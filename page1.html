@@ -6,7 +6,7 @@
     <title>Video Gallery</title>
     <style>
         body {
-            margin: 0;
+            margin:0;
             padding: 0;
             font-family: TimesNewRoman, sans-serif;
             background-color: #000000; /* Background color */
@@ -57,7 +57,7 @@
         .video-caption {
             color: white;
             font-size: 14px;
-            text-align: center;
+            text-align: left;
             margin-top: 10px; /* Adjust spacing between video and caption */
         }
 
@@ -72,25 +72,22 @@
 
         .back-button {
             position: absolute;
-            top: 20px;
-            right: 20px; /* Adjust as needed */
-            padding: 0;
-            background-color: transparent;
-            border: none;
+            top: 10px;
+            right: 10px;
             color: white;
-            cursor: pointer;
-            font-size: 14px;
             text-decoration: none;
-            transition: color 0.3s; /* Smooth color transition on hover */
+            transition: color 0.3s ease;
+            font-family: TimesNewRoman, sans-serif;
         }
 
         .back-button:hover {
-            color: red; /* Change text color to red on hover */
+            color: red;
         }
+
     </style>
 </head>
 <body>
-    <a href="index.html" class="back-button">back to home</a>
+    <a href="index.html" class="back-button">Back</a>
 
     <div class="video-container">
         <div class="video-item large" style="left: 10%; top: 10%;">
