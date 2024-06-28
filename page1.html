@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Background color */
+        }
+
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ensure minimum height to cover viewport */
+        }
+
+        .video-item {
+            width: 300px; /* Adjust width of each video item */
+            margin: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .video-item video {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-out;
+        }
+
+        .video-item video:hover {
+            transform: scale(1.1); /* Example: Enlarge video on hover */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <div class="video-item">
+            <video src="video1.mp4" muted loop preload="metadata"></video>
+        </div>
+        <div class="video-item">
+            <video src="video2.mp4" muted loop preload="metadata"></video>
+        </div>
+        <!-- Add more video items as needed -->
+    </div>
+
+    <script>
+        // JavaScript for playing sound on hover
+        const videos = document.querySelectorAll('.video-item video');
+
+        videos.forEach(video => {
+            video.addEventListener('mouseenter', () => {
+                video.muted = false;
+            });
+
+            video.addEventListener('mouseleave', () => {
+                video.muted = true;
+            });
+        });
+    </script>
+</body>
+</html>
