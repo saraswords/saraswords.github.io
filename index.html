@@ -4,7 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My GitHub Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: left;
+        }
+
+        .image-container {
+            margin-right: 20px;
+        }
+
+        .image-container img {
+            display: block;
+            width: 50px; /* Set the width of the image */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 5px 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: gray;
+        }
+    </style>
 </head> 
 <body>
     <div class="container">
