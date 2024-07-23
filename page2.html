@@ -35,12 +35,68 @@
         .back-to-home:hover {
             color: red;
         }
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('') no-repeat center center fixed;
+            background-size: cover;
+            color: black;
+            font-family: TimesNewRoman, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            height: 100vh;
+            text-align: left;
+            padding-top: 50px; /* Adjust as needed to align with the top of the image box */
+        }
+
+        .image-container {
+            margin-right: 10px;
+        }
+
+        .image-container img {
+            display: block;
+            width: 250px; /* Set the width of the image */
+            height: auto; /* Maintain aspect ratio */
+            border: 10px solid black; /* Add a black border */
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .header-text {
+            margin-bottom: 10px;
+            padding: 0;
+        }
+
+        .header-text p {
+            max-width: 400px; /* Set the maximum width for the paragraph */
+        }
     </style>
 </head>
 <body>
     <a href="index.html" class="back-to-home">Back</a>
+    <div class="image-container">
+        <img src="me_currently.jpg" alt="My Likeness">
+    </div>
     <div class="content">
-        <p>I'd put filler text here, but I don't know how to speak <i>Lorem ipsum</i>.</p>
+        <p>I'm currently a post-bacc researcher at Ev Fedorenko's language lab at MIT. I am the Project Coordinator of Interesting Brains, 
+            an endeavor which investigates the functional topography of cortex in the presence of substantial brain lesions (e.g., arachnoid cysts, resections, hydrocephalus).</p>
+            <p>I am originally from Memphis, Tennessee and enjoy reading and writing fiction in my free time. I also like a good beach. 
+        </p>
     </div>
 </body>
 </html>
