@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: black;
+            font-family: TimesNewRoman, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .back-to-home {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: black;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-family: TimesNewRoman, sans-serif;
+        }
+
+        .back-to-home:hover {
+            color: red;
+        }
+
+        .container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            text-align: left;
+            padding: 20px;
+            background-color: transparent;
+        }
+
+        .image-container {
+            margin-right: 20px;
+        }
+
+        .image-container img {
+            display: block;
+            width: 250px;
+            height: auto;
+            border: 10px solid black;
+        }
+
+        .text-container {
+            max-width: 400px;
+        }
+
+        .text-container p {
+            margin-top: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-to-home">Back</a>
+    <div class="container">
+        <div class="image-container">
+            <img src="cv_image.jpg" alt="Something Interesting Should Go Here, Like An Image">
+        </div>
+        <div class="text-container">
+            <h1>CV</h1>
+            <p>Malik-Moraleda, S., Taliaferro, M., Shannon, S., Jhingan, N., <b>Swords, S.</b>, Peterson, D. J., Frommer, P., Okrand, M., Sams, J., Cardwell, R., Freeman, C., & Fedorenko, E. (2023). Constructed languages are processed by the same brain mechanisms as natural languages. <i>bioRxiv</i>. https://doi.org/10.1101/2023.07.28.550667 
+            </p>
+        </div>
+    </div>
+</body>
+</html>
