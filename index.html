@@ -8,23 +8,49 @@
         body {
             margin: 0;
             padding: 0;
-            background: url('') no-repeat center center fixed;
-            background-size: cover;
+            background-color: white;
             color: black;
             font-family: TimesNewRoman, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .back-to-home {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: black;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-family: TimesNewRoman, sans-serif;
+        }
+
+        .back-to-home:hover {
+            color: red;
         }
 
         .container {
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            padding: 20px;
+            background-color: transparent;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .content {
+            display: flex;
             align-items: flex-start;
             justify-content: center;
-            height: 100vh;
-            text-align: left;
-            padding-top: 50px; /* Adjust as needed to align with the top of the image box */
         }
 
         .image-container {
-            margin-right: 10px;
+            margin-right: 20px;
         }
 
         .image-container img {
@@ -35,9 +61,11 @@
         }
 
         .text-container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+            max-width: 400px;
+        }
+
+        .text-container p {
+            margin-top: 0;
         }
 
         .header-text {
@@ -70,22 +98,25 @@
     </style>
 </head>
 <body>
+    <a href="index.html" class="back-to-home">Back</a>
     <div class="container">
-        <div class="image-container">
-            <img src="main_image.jpg" alt="Your Image">
-        </div>
-        <div class="text-container">
-            <div class="header-text">
-                <h1>Sara</h1>
-                <p>I'm interested in how the spatial constraint placed upon cortex by arachnoid cysts affects the functional organization of the brain.</p>
+        <div class="content">
+            <div class="image-container">
+                <img src="main_image.jpg" alt="Your Image">
             </div>
-            <nav>
-                <ul>
-                    <li><a href="page2.html">About</a></li>
-                    <li><a href="page2.html">CV</a></li>
-                    <li><a href="page1.html">Sights and Sounds</a></li>
-                </ul>
-            </nav>
+            <div class="text-container">
+                <div class="header-text">
+                    <h1>Sara Swords</h1>
+                    <p>I'm interested in how the spatial constraint placed upon cortex by arachnoid cysts affects the functional organization of the brain.</p>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="page2.html">About</a></li>
+                        <li><a href="page2.html">CV</a></li>
+                        <li><a href="page1.html">Sights and Sounds</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
 </body>
