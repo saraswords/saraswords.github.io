@@ -62,9 +62,9 @@
             margin-top: 10px; /* Adjust spacing between video and caption */
         }
 
-        .bottom-left-text {
+        .top-left-text {
             position: absolute;
-            bottom: 20px; /* Adjust as needed */
+            bottom: 930px; /* Adjust as needed */
             left: 20px; /* Adjust as needed */
             color: white;
             font-size: 14px;
@@ -103,23 +103,18 @@
         <div class="video-item large" style="left: 10%; top: 10%;">
             <video id="video1" src="IMG_1575.mov" preload="metadata" onclick="toggleVideo('video1')"></video>
             <div class="play-button" onclick="toggleVideo('video1')">Play</div>
-            <div class="video-caption">Sight</div>
         </div>
         <div class="video-item small" style="left: 40%; top: 30%;">
             <video id="video2" src="/videos/My_Movie_36.mp4" preload="metadata" onclick="toggleVideo('video2')"></video>
             <div class="play-button" onclick="toggleVideo('video2')">Play</div>
-            <div class="video-caption">Sound</div>
         </div>
         <div class="video-item small" style="left: 70%; top: 50%;">
-            <video id="video3" src="/videos/another_video.mp4" preload="metadata" onclick="toggleVideo('video3')"></video>
-            <div class="play-button" onclick="toggleVideo('video3')">Play</div>
-            <div class="video-caption">Sound (soon)</div>
+            <video id="video3" src="/images/art_1.jpg" preload="metadata" onclick="toggleVideo('video3')"></video>
         </div>
-        <!-- Add more video items as needed with different positions and sizes -->
     </div>
 
-    <div class="bottom-left-text">
-        Click to see/hear ordinary, industrial sights/sounds that are interesting.
+    <div class="top-left-text">
+        To avoid a jumpscare, please adjust your volume to the lowest audible setting. Then, click on images to hear some sounds (not all images posess sound). Increase volume to your liking.
     </div>
 
     <script>
